@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "TranslationService.GRPC";
+
+import "google/protobuf/empty.proto";
+
+service Translation {
+	rpc Translate (TranslateRequest) returns (TranslateResponse);
+	rpc GetServiceInfo (google.protobuf.Empty) returns (ServiceInfoResponse);
+}
+
+message TranslateRequest {
+	repeated string texts = 1;
+	string fromLanguage = 2;
+	string toLanguage = 3;
+}
+
+message TranslateResponse {
+	repeated string translations = 1;
+}
+
+message ServiceInfoResponse {
+	string externalService = 1;
+    string cacheType = 2;
+    string cacheVolume = 3;
+}

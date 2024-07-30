@@ -1,6 +1,6 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
 using static TranslationService.GRPC.Translation;
 
 namespace TranslationService.GRPC.Services

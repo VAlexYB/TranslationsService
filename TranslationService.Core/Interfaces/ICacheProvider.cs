@@ -1,4 +1,4 @@
-﻿namespace TranslationService.Interfaces
+﻿namespace TranslationService.Core.Interfaces
 {
     public interface ICacheProvider
     {

@@ -1,4 +1,4 @@
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
 using TranslationService.Services;
 
 var builder = WebApplication.CreateBuilder(args);

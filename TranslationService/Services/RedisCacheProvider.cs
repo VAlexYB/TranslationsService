@@ -1,6 +1,7 @@
 ﻿using StackExchange.Redis;
 using System.Data;
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
+
 
 namespace TranslationService.Services
 {

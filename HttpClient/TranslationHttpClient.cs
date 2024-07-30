@@ -1,8 +1,10 @@
 ﻿using System.Net.Http.Json;
+using TranslationService.Core;
+using TranslationService.Core.Interfaces;
 
 namespace TranslationService.Client.Http
 {
-    public class TranslationHttpClient
+    public class TranslationHttpClient : ITranslationService
     {
         private readonly HttpClient _httpClient;
 
@@ -19,14 +21,13 @@ namespace TranslationService.Client.Http
             return await response.Content.ReadFromJsonAsync<string[]>();
         }
 
-        public async Task<ServiceInfoResponse> GetServiceInfoAsync()
+        public async Task<ServiceInfo> GetServiceInfoAsync()
         {
             var response = await _httpClient.GetAsync("/getServiceInfo");
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<ServiceInfoResponse>();
+            return await response.Content.ReadFromJsonAsync<ServiceInfo>();
         }
     }
 
     public record TranslationRequest(string[] Texts, string FromLanguage, string ToLanguage);
-    public record ServiceInfoResponse(string ExternalService, string CacheType, string CacheVolume);
 }

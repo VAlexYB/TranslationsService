@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TranslationService.Core\TranslationService.Core.csproj" />
     <ProjectReference Include="..\TranslationService.GRPC\TranslationService.GRPC.csproj" />
   </ItemGroup>
 

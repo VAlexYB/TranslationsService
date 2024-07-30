@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TranslationService.Console;
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
 using TranslationService.Services;
 
 var host = CreateHostBuilder(args).Build();

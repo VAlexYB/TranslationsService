@@ -1,5 +1,5 @@
 ﻿ using System;
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
 namespace TranslationService.Console
 {
     public class App

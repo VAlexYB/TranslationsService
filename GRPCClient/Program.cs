@@ -9,26 +9,21 @@ namespace TranslationService.Client.gRPC
     {
         public static async Task Main(string[] args)
         {
-            var channel = GrpcChannel.ForAddress("https://localhost:7263");
-            var client = new Translation.TranslationClient(channel);
+            var translationClient = new TranslationGRPCClient("https://localhost:7263");
 
-            var request = new TranslateRequest
-            {
-                FromLanguage = "en",
-                ToLanguage = "ru"
-            };
-            request.Texts.Add("Hello");
-            request.Texts.Add("World");
+            var texts = new[] { "Hello", "World" };
+            var fromLanguage = "en";
+            var toLanguage = "ru";
 
             try
             {
-                var translateResponse = await client.TranslateAsync(request);
-                foreach (var translation in translateResponse.Translations)
+                var translateResponse = await translationClient.TranslateAsync(texts, fromLanguage, toLanguage);
+                foreach (var translation in translateResponse)
                 {
                     Console.WriteLine(translation);
                 }
 
-                var serviceInfoResponse = await client.GetServiceInfoAsync(new Google.Protobuf.WellKnownTypes.Empty());
+                var serviceInfoResponse = await translationClient.GetServiceInfoAsync();
 
                 await Console.Out.WriteLineAsync($"Использовано API : {serviceInfoResponse.ExternalService}\n" +
                     $"Кэшироваине проиcходит через {serviceInfoResponse.CacheType}\nОбъем кэша: {serviceInfoResponse.CacheVolume}");

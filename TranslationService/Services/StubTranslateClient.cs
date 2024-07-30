@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using TranslationService.Interfaces;
+using TranslationService.Core.Interfaces;
 
 namespace TranslationService.Services
 {

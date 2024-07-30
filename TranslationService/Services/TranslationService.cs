@@ -1,4 +1,5 @@
-﻿using TranslationService.Interfaces;
+﻿using TranslationService.Core;
+using TranslationService.Core.Interfaces;
 
 namespace TranslationService.Services
 {

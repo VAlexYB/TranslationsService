@@ -1,4 +1,4 @@
-﻿namespace TranslationService
+﻿namespace TranslationService.Core
 {
     public class ServiceInfo
     {

@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslationService", "Trans
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslationService.Console", "TranslationService.Console\TranslationService.Console.csproj", "{88E0C348-61AF-433A-8166-7BDB6AB13BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslationService.GRPC", "TranslationService.GRPC\TranslationService.GRPC.csproj", "{7D75E56A-C391-4C97-83BD-2F652742F9EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslationService.GRPC", "TranslationService.GRPC\TranslationService.GRPC.csproj", "{7D75E56A-C391-4C97-83BD-2F652742F9EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslationService.API", "TranslationService.API\TranslationService.API.csproj", "{350E3A2F-FA82-40B3-BCA1-154D44A10693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TranslationService.API", "TranslationService.API\TranslationService.API.csproj", "{350E3A2F-FA82-40B3-BCA1-154D44A10693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCClient", "GRPCClient\GRPCClient.csproj", "{0F887D1D-0FA4-4262-ACF0-3B2356F69BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCClient", "GRPCClient\GRPCClient.csproj", "{0F887D1D-0FA4-4262-ACF0-3B2356F69BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTTPClient", "HttpClient\HTTPClient.csproj", "{EA76A7A1-49A9-4A76-B850-FD988FC5B2C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HTTPClient", "HttpClient\HTTPClient.csproj", "{EA76A7A1-49A9-4A76-B850-FD988FC5B2C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslationService.Core", "TranslationService.Core\TranslationService.Core.csproj", "{2A7F6889-9941-4DBC-A3D1-961DD869A498}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{EA76A7A1-49A9-4A76-B850-FD988FC5B2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA76A7A1-49A9-4A76-B850-FD988FC5B2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA76A7A1-49A9-4A76-B850-FD988FC5B2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7F6889-9941-4DBC-A3D1-961DD869A498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7F6889-9941-4DBC-A3D1-961DD869A498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7F6889-9941-4DBC-A3D1-961DD869A498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7F6889-9941-4DBC-A3D1-961DD869A498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
